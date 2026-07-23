@@ -1,0 +1,17 @@
+# Render Blueprint for CloudCast
+# This file lets you deploy the app in one click via https://render.com/deploy
+# Set OPENWEATHER_API_KEY in the Render dashboard before deploying.
+
+services:
+  - type: web
+    name: cloudcast
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: OPENWEATHER_BASE_URL
+        value: https://api.openweathermap.org/data/2.5
+      - key: PORT
+        value: 8080

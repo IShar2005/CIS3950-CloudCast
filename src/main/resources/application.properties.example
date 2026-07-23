@@ -1,0 +1,16 @@
+# CloudCast Configuration Template
+# Copy this file to application.properties and fill in your real API key.
+# The real application.properties is gitignored so the key stays out of GitHub.
+#
+# On Render (or any hosted environment), set these as environment variables instead
+# and reference them here as ${OPENWEATHER_API_KEY} etc.
+
+# OpenWeatherMap API
+openweather.api.key=YOUR_API_KEY_HERE
+openweather.api.base-url=https://api.openweathermap.org/data/2.5
+
+# Server
+server.port=8080
+
+# App info
+spring.application.name=cloudcast

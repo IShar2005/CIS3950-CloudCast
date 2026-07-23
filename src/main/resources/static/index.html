@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CloudCast - Real-time weather, 5-day forecasts, and severe weather alerts for any city.">
+    <title>CloudCast — Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="header-top">
+                <h1>CloudCast</h1>
+                <div class="unit-toggle" role="group" aria-label="Temperature units">
+                    <button type="button" id="unit-imperial" class="unit-btn active" aria-pressed="true">°F</button>
+                    <button type="button" id="unit-metric" class="unit-btn" aria-pressed="false">°C</button>
+                </div>
+            </div>
+            <p class="tagline">Real-time weather for any city</p>
+        </header>
+
+        <form id="search-form" class="search-form" role="search">
+            <label for="city-input" class="visually-hidden">City name</label>
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter a city name (e.g., Miami)"
+                autocomplete="off"
+                required
+                aria-label="City name"
+            >
+            <button type="submit" aria-label="Search for weather">Search</button>
+            <button type="button" id="geo-btn" class="geo-btn" aria-label="Use my current location">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+                </svg>
+                <span>My Location</span>
+            </button>
+        </form>
+
+        <section id="favorites" class="favorites" aria-label="Favorite locations"></section>
+
+        <section id="alert-banner" class="alert-banner" role="region" aria-live="polite" aria-atomic="true" hidden></section>
+
+        <section id="results" class="results" aria-live="polite"></section>
+
+        <section id="forecast" class="forecast" aria-label="5-day forecast"></section>
+
+        <footer>
+            <p>CloudCast · CIS3950 Capstone · FIU Summer 2026</p>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
